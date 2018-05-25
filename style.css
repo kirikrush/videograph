@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: block;
+}
+a:visited {
+  color: #ffffff;
+}
+header {
+  background-image: url(img/header__background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 65px 10% 200px 10%;
+}
+.header__top {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.header__menu {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.header__anchor {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+}
+.header__anchor:hover {
+  color: #73cffa;
+}
+.header__list__item:not(:last-child) {
+  margin-right: 40px;
+}
+.central__titles {
+  margin: 190px auto 240px auto;
+  text-align: center;
+}
+.profi,
+.videophoto {
+  display: block;
+}
+.videophoto {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 38px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4.75px;
+}
+.logotype {
+  display: block;
+  margin: 0 auto;
+}
+.button {
+  display: block;
+  margin-top: 67px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 60px;
+  border-radius: 30px;
+  background-image: url(img/button.png);
+  background-repeat: no-repeat;
+  padding-top: 15px;
+}
+.button__anchor {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+}
+.button__anchor:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 23px;
+  height: 23px;
+  background-image: url(img/play.png);
+  background-repeat: no-repeat;
+  right: 10px;
+  top: 6px;
+}
+.callback {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.33px;
+}
+.callback:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(img/callback.png);
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+.profi {
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.63px;
+}
+section {
+  padding: 65px 15% 65px 15%;
+  position: relative;
+}
+.header {
+  color: #000000;
+  font-family: "Montserrat";
+  font-size: 53px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.32px;
+}
+section:nth-child(2n) .header {
+  color: #ffffff;
+}
+.paragraph__emotions {
+  display: inline-block;
+  width: 42%;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  margin-top: 90px;
+  line-height: 40px;
+}
+.camera {
+  display: block;
+  position: absolute;
+  left: 25%;
+  top: -160px;
+  z-index: -1;
+}
+.works {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  height: 800px;
+}
+.header__min {
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.44px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+.header__mid {
+  font-family: Montserrat;
+  font-size: 31px;
+  font-weight: 9 00;
+  text-transform: uppercase;
+  letter-spacing: 0.62px;
+  margin-bottom: 60px;
+}
+.list__item__service {
+  font-family: Montserrat;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  margin-top: 10px;
+}
+.list__item__service span {
+  padding: 5px 15px;
+  position: relative;
+  left: -15px;
+}
+.menu {
+  width: 50%;
+  background-image: url(img/menu_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 65px 10%;
+}
+.presentation {
+  width: 50%;
+  background-image: url(img/presentaton_bg.png);
+  background-repeat: repeat;
+  background-position-y: 0%;
+  background-size: cover;
+  padding: 65px 10%;
+  transition: all linear 0.5s;
+  overflow: hidden;
+}
+.slider__item {
+  margin-top: 150px;
+  margin-bottom: 250px;
+  position: relative;
+  top: 0;
+  transition: all linear 0.5s;
+}
+.item__description {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  width: 440px;
+  margin-top: 60px;
+}
