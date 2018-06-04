@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
 }
+button {
+  border: none;
+}
+button:focus {
+  border: none;
+}
 body {
   width: 100%;
 }
@@ -19,6 +25,7 @@ a:visited {
 }
 header {
   background-image: url(img/header__background.png);
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -80,6 +87,8 @@ header {
   background-image: url(img/button.png);
   background-repeat: no-repeat;
   padding-top: 15px;
+  background-size: cover;
+  background-position: center;
 }
 .button__anchor {
   color: #ffffff;
@@ -124,8 +133,9 @@ header {
   letter-spacing: 1.63px;
 }
 section {
-  padding: 65px 15% 65px 15%;
+  padding: 65px 10% 65px 10%;
   position: relative;
+  overflow: hidden;
 }
 .header {
   color: #000000;
@@ -213,6 +223,29 @@ section:nth-child(2n) .header {
   top: 0;
   transition: all linear 0.5s;
 }
+.img__preview__container {
+  position: relative;
+  background-image: url(img/preview1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 440px;
+  height: 255px;
+}
+.play__logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all linear 0.5s;
+}
+.img__preview__container:hover .play__logo {
+  opacity: 1;
+}
+.preview__play {
+  opacity: 0.5;
+}
 .item__description {
   color: #ffffff;
   font-family: Montserrat;
@@ -221,4 +254,309 @@ section:nth-child(2n) .header {
   letter-spacing: 0.36px;
   width: 440px;
   margin-top: 60px;
+}
+.slider__horizontal {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+.video__button,
+.photo__button {
+  display: inline-block;
+  border-radius: 3px;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.44px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+  background: linear-gradient(to left, #9688e4 0%, #71d2fb 100%);
+  background-position: -300px 0;
+  background-repeat: no-repeat;
+  transition: all 0.3s linear;
+}
+.video__button {
+  background-position: 0 0;
+}
+.slider__item__horizontal {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  position: relative;
+  left: 0;
+  margin-right: 1000px;
+  transition: left 0.5s linear;
+}
+.vertical__img {
+  width: 293px;
+  height: 419px;
+}
+.vertical__img:nth-child(1) {
+  background-image: url(img/image1.png);
+}
+.vertical__img:nth-child(2) {
+  background-image: url(img/image2.png);
+}
+.vertical__img:nth-child(3) {
+  background-image: url(img/image3.png);
+}
+.vertical__img:nth-child(4) {
+  background-image: url(img/image4.png);
+}
+.vertical__img:not(:last-child) {
+  margin-right: 1px;
+}
+.reasons {
+  background-image: url(img/background_reasons.png);
+  padding: 65px 35% 0px 10%;
+  position: relative;
+}
+.header__reasons {
+  color: #cbdbef;
+}
+.info {
+  width: 70%;
+}
+.wall {
+  display: block;
+  height: 100%;
+  position: absolute;
+  float: right;
+  top: 0;
+  right: 0;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  margin-left: 100px;
+}
+.grid__item {
+  display: block;
+  margin-right: 150px;
+  width: 30%;
+  margin-bottom: 90px;
+}
+.grid__header {
+  margin-bottom: 25px;
+  color: #fffdfe;
+  font-family: Montserrat;
+  font-weight: 900;
+  font-family: "Montserrat";
+  font-size: 22px;
+  letter-spacing: 0.44px;
+  position: relative;
+  z-index: 3;
+}
+.grid__header::before {
+  content: "01";
+  display: block;
+  position: absolute;
+  left: -100px;
+  opacity: 0.5;
+  color: #fffdfe;
+  font-family: "Iskra CYR - Ultra Bold";
+  font-size: 89px;
+  font-weight: 400;
+  line-height: 51.17px;
+  text-transform: uppercase;
+  letter-spacing: 2.18px;
+  z-index: 2;
+}
+.paint {
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  z-index: 1;
+}
+.grid__paragraph {
+  font-family: Montserrat;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  line-height: 27px;
+  color: #fff;
+  width: 100%;
+}
+.price__grid {
+  justify-content: space-between;
+  margin: 80px 0 0 0;
+  flex-wrap: wrap;
+}
+.price__grid__item {
+  width: 30%;
+  min-width: 300px;
+  margin-right: 20px;
+  box-shadow: 0 0 28px 2px rgba(5, 1, 26, 0.06);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.price__header {
+  display: block;
+  text-align: center;
+  color: #202020;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.51px;
+  margin-bottom: 15px;
+}
+.price__span {
+  display: block;
+  padding: 10px 30px;
+  background-image: url(img/price_bg.png);
+  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 46px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.description__span {
+  display: inline-block;
+  margin: 20px;
+  margin-left: 50px;
+  color: #202020;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.37px;
+  position: relative;
+}
+.first::before {
+  content: "";
+  width: 50px;
+  display: block;
+  top: 50%;
+  position: absolute;
+  left: -60px;
+  height: 2px;
+  background-color: #7dbbf4;
+}
+.first:after {
+  content: "";
+  display: block;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  right: -305px;
+  height: 2px;
+  background-color: #7dbbf4;
+}
+.wrap {
+  width: 30px;
+  margin: 0 auto;
+  position: relative;
+}
+.price__button {
+  text-align: center;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.47px;
+  width: 50%;
+}
+.price__grid__item:hover .wrap::before {
+  content: "";
+  width: 300px;
+  display: block;
+  top: 50%;
+  position: absolute;
+  left: -310px;
+  height: 2px;
+  background-color: #7dbbf4;
+}
+.price__grid__item:hover .wrap::after {
+  content: "";
+  width: 300px;
+  display: block;
+  top: 50%;
+  position: absolute;
+  right: -310px;
+  height: 2px;
+  background-color: #7dbbf4;
+}
+.wedding {
+  background-image: url(img/wedding_bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.wedding__header__min {
+  color: #fff;
+}
+.callback__form {
+  margin-top: 70px;
+}
+input[type=text] {
+  width: 300px;
+  height: 40px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: none;
+  margin-right: 20px;
+  color: #a6a6a6;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+}
+.button[type=submit] {
+  display: inline-block;
+  height: 60px;
+  padding: 10px 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.47px;
+}
+input[type=checkbox] {
+  display: none;
+}
+label {
+  margin-top: 20px;
+  display: block;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  position: relative;
+  margin-left: 50px;
+}
+label:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #7dc1f3;
+  border-radius: 35%;
+  position: absolute;
+  top: -10%;
+  left: -50px;
+}
+input[type=checkbox]:checked + label::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: absolute;
+  left: -50px;
+  top: -8%;
+  background-image: url(img/check.png);
 }
